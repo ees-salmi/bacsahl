@@ -7,7 +7,11 @@ import React from 'react'
 
 const Saluer= props =>{
     console.log(props)
-    return <h2>hello this an arrow test funtion {props.name} you're a {props.heroName} !</h2>
-
+    return ( <div>
+    <h2>hello this an arrow test funtion {props.name} you're a {props.heroName} !</h2>
+  
+    {props.children}
+    </div>
+    )
 }
 export default Saluer
