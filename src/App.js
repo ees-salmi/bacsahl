@@ -1,31 +1,30 @@
-import React from 'react';
-
+import React, {Component} from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+// import {Navbar,NavbarBrand} from 'reactstrap'
 import './App.css';
-//import Saluer from './components/Saluer'
+import Menu from './components/Menu';
+import {DISHES} from './shared/dishes';
 
-// import Welcome from './components/Welcome'
-// import Message from './components/Message'
-// import Counter from './components/Counter'
-import FunctionClick from './components/FunctionClick'
-import ClassClick from './components/ClassClick';
-import ClassClick1 from './components/ClassClick';
-import EventBind from './components/EventBind';
 
-function App() {
+
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+  
+    this.state = {
+      dishes : DISHES
+       
+    };
+  }
+  render(){
   return (
-    <div className="App">
-      
+    
 
-    <EventBind></EventBind>
-
-
-
-      {/* <FunctionClick></FunctionClick>
-      <ClassClick></ClassClick>
-      <ClassClick1></ClassClick1> */}
-
-    </div>
+    <Menu dishes={this.state.dishes} />
+    
   );
+}
 }
 
 export default App;
