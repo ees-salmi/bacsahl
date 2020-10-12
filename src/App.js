@@ -1,30 +1,19 @@
 import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-// import {Navbar,NavbarBrand} from 'reactstrap'
 import './App.css';
-import Menu from './components/Menu';
-import {DISHES} from './shared/dishes';
-
-
-
+import {BrowserRouter} from 'react-router-dom'
+import Main from './components/MainComponent';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-  
-    this.state = {
-      dishes : DISHES
-       
-    };
+  render() {
+    return (
+      <BrowserRouter>
+      <div className="App">
+        <Main />
+      </div>
+    </BrowserRouter>
+    );
   }
-  render(){
-  return (
-    
-
-    <Menu dishes={this.state.dishes} />
-    
-  );
-}
 }
 
 export default App;
