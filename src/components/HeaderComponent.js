@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand, Jumbotron,NavItem,NavLink,Nav,NavbarToggler,Collapse } from 'reactstrap';
-
+import { Navbar, NavbarBrand, Jumbotron,NavItem,NavLink,Nav,NavbarToggler,Collapse,NavbarText } from 'reactstrap';
+import { Link } from 'react-router-dom';
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -30,7 +30,7 @@ class Header extends Component {
                                 <NavLink className="nav-link"  to='/home'><span className="fa fa-home fa-lg"></span> Home</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="nav-link" to='/aboutus'><span className="fa fa-info fa-lg"></span> About Us</NavLink>
+                                <Link className="nav-link" to='/aboutus'><span className="fa fa-info fa-lg"></span> About Us</Link>
                             </NavItem>
                             <NavItem>
                                 <NavLink className="nav-link"  to='/menu'><span className="fa fa-list fa-lg"></span> Menu</NavLink>
@@ -40,14 +40,16 @@ class Header extends Component {
                             </NavItem>
                             </Nav>
                         </Collapse>
+                        <NavbarText>Simple Text</NavbarText>
                     </div>
                 </Navbar>
-       <Jumbotron>
+       <Jumbotron fluid>
            <div className="container">
-               <div className="row row-header">
+              <div className="row row-header">
                    <div className="col-12 col-sm-6">
                        <h1>bienvenue dans notre restaurant</h1>
                        <p>exemple d'une discription header!</p>
+                      
                    </div>
                </div>
            </div>
