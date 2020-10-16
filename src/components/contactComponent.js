@@ -1,8 +1,9 @@
 import React                          from 'react';
-import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { Link }                       from 'react-router-dom'
 import  Forms                         from './Form'
-
+import { Control, LocalForm, Errors } from 'react-redux-form';
+import { Breadcrumb, BreadcrumbItem,
+    Button, Row, Col, Label  }        from 'reactstrap';
 
 function Contact(props) {
     return(
