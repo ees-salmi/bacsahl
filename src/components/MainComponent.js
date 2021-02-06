@@ -1,22 +1,25 @@
 import React, { Component } from 'react';
 import Menu                 from './MenuComponent';
-import DishDetail         from './DishdetailComponent'; 
+import DishDetail           from './DishdetailComponent'; 
 import { DISHES }           from '../shared/dishes';
 import Header               from './HeaderComponent';
 import Footer               from './FooterComponent';
 import Home                 from './HomeComponent'
-import Contact              from './contactComponent';
+import Forms                from './Form';
+import products             from './products'
 import { COMMENTS }         from '../shared/comments';
 import { PROMOTIONS }       from '../shared/promotions';
 import { LEADERS }          from '../shared/leaders';
-import About                from './AboutComponent';
+import About                from './AboutComponent';  
 import { connect }          from 'react-redux';
 import { Switch, Route,
    Redirect, withRouter }   from 'react-router-dom'
 
 
+  // this pure function is used to get states from the store and make this props
    const mapStateToProps = state => {
     return {
+      // to make this states available as components
       dishes: state.dishes,
       comments: state.comments,
       promotions: state.promotions,
@@ -29,10 +32,10 @@ class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dishes: DISHES,
-      comments: COMMENTS,
+      dishes    : DISHES,
+      comments  : COMMENTS,
       promotions: PROMOTIONS,
-      leaders: LEADERS
+      leaders   : LEADERS
     };
   }
   
@@ -69,7 +72,9 @@ class Main extends Component {
               <Route exact path='/aboutus' component={() => <About leaders={this.props.leaders} />}  />
               <Route exact path='/menu' component={() => <Menu dishes={this.props.dishes} />} />
               <Route path='/menu/:dishId' component={DishWithId} />
-              <Route exact path='/contactus' component={Contact}  />
+              <Route exact path='/contactus' component={Forms} />
+              <Route exact path='/products' component={products} />
+             
               <Redirect to="/home" />
           </Switch>
         </div>

@@ -7,12 +7,11 @@ class Header extends Component {
     super(props);
 
     this.state = {
-      isNavOpen: false,
-      isModalOpen: false
+      
     };
-    this.toggleNav = this.toggleNav.bind(this);
-    this.toggleModal = this.toggleModal.bind(this);
-    this.handleLogin = this.handleLogin.bind(this);
+    // this.toggleNav = this.toggleNav.bind(this);
+    // this.toggleModal = this.toggleModal.bind(this);
+    // this.handleLogin = this.handleLogin.bind(this);
   }
 
   toggleNav() {
@@ -43,21 +42,21 @@ class Header extends Component {
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>
                             <NavItem>
-                                <NavLink className="nav-link"  to='/home'><span className="fa fa-home fa-lg"></span> Home</NavLink>
+                                <NavLink className="nav-link"  to='/products'><span className="fa fa-home fa-lg"></span> Produits</NavLink>
                             </NavItem>
                             <NavItem>
-                                <Link className="nav-link" to='/aboutus'><span className="fa fa-info fa-lg"></span> About Us</Link>
+                                <Link className="nav-link" to='/category'><span className="fa fa-info fa-lg"></span> Catégorie</Link>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="nav-link"  to='/menu'><span className="fa fa-list fa-lg"></span> Menu</NavLink>
+                                <NavLink className="nav-link"  to='/commandess'><span className="fa fa-list fa-lg"></span> Commandes</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="nav-link" to='/contactus'><span className="fa fa-address-card fa-lg"></span> Contact Us</NavLink>
+                                <NavLink className="nav-link" to='/shipping'><span className="fa fa-address-card fa-lg"></span> Livraison</NavLink>
                             </NavItem>
                             </Nav>
                             <Nav className="ml-auto" navbar>
                                 <NavItem>
-                                    <Button outline onClick={this.toggleModal}><span className="fa fa-sign-in fa-lg"></span> Login</Button>
+                                    <Button outline onClick={this.toggleModal}><span className="fa fa-sign-in fa-lg"></span> Déconnection</Button>
                                 </NavItem>
                             </Nav>
 
@@ -89,7 +88,7 @@ class Header extends Component {
                         </Collapse>
                     </div>
                 </Navbar>
-       {/* <Jumbotron fluid color="primary">
+       <Jumbotron fluid>
            <div className="container">
               <div className="row row-header">
                    <div className="col-12 col-sm-6">
@@ -99,7 +98,7 @@ class Header extends Component {
                    </div>
                </div>
            </div>
-       </Jumbotron> */}
+       </Jumbotron>
     </React.Fragment>
     );
   }

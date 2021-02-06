@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#productsTable  th
+{
+    text-align: center; 
+    vertical-align: middle;
+    font-size: small;
+}
+
+#productsTable td 
+{
+  text-align: center; 
+  vertical-align: middle;
+  font-size: small;
+  font-family: 'Franklin Gothic Medium';
+}
+
+#crudButtons
+{
+  width: 70px;
+  height: 50;
+  font-size: 9px;
+}
