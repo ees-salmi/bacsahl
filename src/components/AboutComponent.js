@@ -35,7 +35,7 @@ function About(props) {
             <div className="row">
                 <Breadcrumb>
                     <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
-                    <BreadcrumbItem active>About Us</BreadcrumbItem>
+                    <BreadcrumbItem ><Link to="/home">About Us</Link></BreadcrumbItem>
                 </Breadcrumb>
                 <div className="col-12">
                     <h3>About Us</h3>

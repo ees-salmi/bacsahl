@@ -17,7 +17,7 @@ export default class HorizontalForm extends Component {
                 <Form inline>
                     <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                         <Label for="productName" className="mr-sm-2">Nom:</Label>
-                        <Input type="text" name="name" id="productName" placeholder="donner un nom du produit" />
+                        <Input type="text" name="name" id="productName" placeholder="nom du produit" />
                     </FormGroup>
                     <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                         <Label for="productPrice" className="mr-sm-2">prix:</Label>
@@ -40,7 +40,7 @@ export default class HorizontalForm extends Component {
                             </Col>
                     </FormGroup>
                           
-                    <Button color="success">Submit</Button>
+                    <Button color="success">Filtrer</Button>
                 </Form>
                 </div>
             

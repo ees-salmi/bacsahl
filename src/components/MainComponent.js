@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import Menu                 from './MenuComponent';
 import DishDetail           from './DishdetailComponent'; 
+import commands             from './commands'
 import { DISHES }           from '../shared/dishes';
 import Header               from './HeaderComponent';
 import Footer               from './FooterComponent';
 import Home                 from './HomeComponent'
 import Forms                from './Form';
-import products             from './products'
+import Products             from './Products'
 import { COMMENTS }         from '../shared/comments';
+import { PRODUCTS }         from '../shared/products';
 import { PROMOTIONS }       from '../shared/promotions';
 import { LEADERS }          from '../shared/leaders';
 import About                from './AboutComponent';  
@@ -23,7 +25,8 @@ import { Switch, Route,
       dishes: state.dishes,
       comments: state.comments,
       promotions: state.promotions,
-      leaders: state.leaders
+      leaders: state.leaders,
+      products: state.products
     }
   }
 
@@ -35,7 +38,8 @@ class Main extends Component {
       dishes    : DISHES,
       comments  : COMMENTS,
       promotions: PROMOTIONS,
-      leaders   : LEADERS
+      leaders   : LEADERS,
+      products  : PRODUCTS
     };
   }
   
@@ -73,7 +77,9 @@ class Main extends Component {
               <Route exact path='/menu' component={() => <Menu dishes={this.props.dishes} />} />
               <Route path='/menu/:dishId' component={DishWithId} />
               <Route exact path='/contactus' component={Forms} />
-              <Route exact path='/products' component={products} />
+              <Route exact path='/products' component={Products} />
+              <Route exact path='/commands' component={commands} />
+              
              
               <Redirect to="/home" />
           </Switch>

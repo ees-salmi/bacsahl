@@ -7,22 +7,21 @@ function Footer(props) {
         <div className="container">
             <div className="row justify-content-center">             
                 <div className="col-4 offset-1 col-sm-2">
-                    <h5>Links</h5>
+                    <h5>Liens</h5>
                     <ul className="list-unstyled">
                     
                              <li><Link to='/home'>Home</Link></li>
-                             <li><Link to='/aboutus'>About Us</Link></li>
-                             <li><Link to='/menu'>Menu</Link></li>
-                             <li><Link to='/contactus'>Contact Us</Link></li>
+                             <li><Link to='/aboutus'>Utilisateurs</Link></li>
+                             <li><Link to='/menu'>Commandes</Link></li>
+                             <li><Link to='/contactus'>Stock</Link></li>
+                             <li><Link to='/contactus'>Stock</Link></li>
                         
                     </ul>
                 </div>
                 <div className="col-7 col-sm-5">
-                    <h5>Our Address</h5>
+                    <h5>Addresse</h5>
                     <address>
-		              121, Clear Water Bay Road<br />
-		              Clear Water Bay, Kowloon<br />
-		              settat<br />
+		              121, Nearshore<br />
 		              <i className="fa fa-phone fa-lg"></i>: +212 606 060 481<br />
 		              <i className="fa fa-fax fa-lg"></i>: +212 606 060 481<br />
 		              <i className="fa fa-envelope fa-lg"></i>: <a href="mailto:es-salmi.fst@uhp.ac.ma">

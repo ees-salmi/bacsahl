@@ -13,6 +13,7 @@ class Header extends Component {
     this.toggleNav = this.toggleNav.bind(this);
     this.toggleModal = this.toggleModal.bind(this);
     this.handleLogin = this.handleLogin.bind(this);
+    
   }
 
   toggleNav() {
@@ -43,21 +44,30 @@ class Header extends Component {
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>
                             <NavItem>
-                                <NavLink className="nav-link"  to='/home'><span className="fa fa-home fa-lg"></span> Home</NavLink>
+                                <NavLink className="nav-link"  to='/home' active><span className="fa fa-home fa-lg"></span> Home</NavLink>
                             </NavItem>
                             <NavItem>
-                                <Link className="nav-link" to='/aboutus'><span className="fa fa-info fa-lg"></span> About Us</Link>
+                                <Link className="nav-link" to='/aboutus' active><span className="fa fa-info fa-lg"></span> About Us</Link>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="nav-link"  to='/menu'><span className="fa fa-list fa-lg"></span> Menu</NavLink>
+                                <NavLink className="nav-link"  to='/menu' active><span className="fa fa-list fa-lg"></span> Menu</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="nav-link" to='/contactus'><span className="fa fa-address-card fa-lg"></span> Contact Us</NavLink>
+                                <NavLink className="nav-link" to='/contactus' active><span className="fa fa-address-card fa-lg"></span> Utilisateurs</NavLink>
+                            </NavItem>
+                            <NavItem >
+                                <Link className="nav-link" to='/products' ><span className="fa fa-product-hunt fa-lg"></span>produits</Link>
+                            </NavItem>
+                            <NavItem >
+                                <NavLink className="nav-link" to='/stock' active><span className="fas fa-coins fa-lg"></span>Stock</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <Link className="nav-link" to='/commands' active  ><span className="fa fa-check-square fa-lg"></span>Commandes</Link>
                             </NavItem>
                             </Nav>
                             <Nav className="ml-auto" navbar>
                                 <NavItem>
-                                    <Button outline onClick={this.toggleModal}><span className="fa fa-sign-in fa-lg"></span> Login</Button>
+                                    <Button outline onClick={this.toggleModal}><span className="fa fa-sign-in fa-lg"></span> Déconnection</Button>
                                 </NavItem>
                             </Nav>
 
