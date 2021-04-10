@@ -5,7 +5,7 @@ import { Button, Form, FormGroup, Label, Input,Col } from 'reactstrap';
 
 export default class HorizontalForm extends Component {
 
-
+  
     
 
         render() {
@@ -40,7 +40,7 @@ export default class HorizontalForm extends Component {
                             </Col>
                     </FormGroup>
                           
-                    <Button color="success">Filtrer</Button>
+                    <Button color="success">Ajouter</Button>
                 </Form>
                 </div>
             

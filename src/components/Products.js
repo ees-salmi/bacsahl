@@ -50,7 +50,7 @@ class Products extends Component{
                 <div className="row align-items-start">
                 <div className="col-12 col-md m-1">
                 <Card style={{padding:12}}> <HorizontalForm></HorizontalForm> </Card>
-                
+                <div class="row" ><div className="col-12" style={{padding:4}}></div></div>
                 <Card><Table id = "productsTable" bordered>
                   <thead>
                     <tr>
