@@ -2,7 +2,7 @@ import axios from 'axios'
 //const axios = require('axios');
 
 
-const ALL_PRODUCTS_URL = "http://localhost:8080/products/getProducts";
+const ALL_PRODUCTS_URL = "https://fakestoreapi.com/products";
 
 class ProductService {
 
